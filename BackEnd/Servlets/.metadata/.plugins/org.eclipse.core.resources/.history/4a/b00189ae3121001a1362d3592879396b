@@ -1,0 +1,28 @@
+<%@page import="com.capgemini.mywebapp.beans.EmployeeInfoBean"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ page session="false" %>
+    
+    <% EmployeeInfoBean employeeInfoBean=(EmployeeInfoBean)request.getAttribute("employeeInfoBean"); %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+<fieldset>
+<legend>Search Employee</legend>
+<form action="./getEmployee" method="get">
+<input type="submit" value="Search">
+
+
+</form>
+</fieldset>
+<br>
+<%if(employeeInfoBean==null){ %>
+<h3 style="color:green;">Details for EmployeeId <%=employeeInfoBean.getEmpId()%></h3>
+
+</body>
+</html>

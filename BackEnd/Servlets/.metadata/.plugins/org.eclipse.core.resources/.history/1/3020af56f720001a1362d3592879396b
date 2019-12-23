@@ -1,0 +1,16 @@
+package com.capgemini.mywebapp.dao;
+
+import com.capgemini.mywebapp.beans.EmployeeInfoBean;
+
+import antlr.collections.List;
+
+public interface EmployeeDAO {
+	public EmployeeInfoBean authenticate(int empId,String password);
+	public EmployeeInfoBean searchEmployee(int empId);
+	public EmployeeInfoBean addEmployee(EmployeeInfoBean employeeInfoBean);
+	public EmployeeInfoBean updateEmployee(EmployeeInfoBean employeeInfoBean);
+	public EmployeeInfoBean deleteEmployee(int empId);
+	public List<EmployeeInfoBean> getAllEmployees();
+
+
+}

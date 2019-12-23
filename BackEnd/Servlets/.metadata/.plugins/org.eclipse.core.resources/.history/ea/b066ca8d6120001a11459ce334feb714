@@ -1,0 +1,20 @@
+package com.capgemini.mywebapp.servlets;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//get form data
+		String empIdVal=req.getParameter("empId");
+		String password=req.getParameter("password");
+		int empId=Integer.parseInt(empIdVal);
+	}//end of doGet
+
+}//end of class

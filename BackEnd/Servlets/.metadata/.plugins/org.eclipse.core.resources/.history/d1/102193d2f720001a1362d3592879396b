@@ -1,0 +1,9 @@
+package com.capgemini.mywebapp.service;
+
+import com.capgemini.mywebapp.beans.EmployeeInfoBean;
+
+public interface EmployeeService {
+	public EmployeeInfoBean authenticate(int empId,String password);
+	public EmployeeInfoBean searchEmployee(int empId);
+
+}
