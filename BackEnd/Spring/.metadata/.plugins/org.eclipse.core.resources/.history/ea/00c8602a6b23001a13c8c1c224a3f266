@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="hello" class="com.capgemini.springcore.beans.Hello" init-method="init" destroy-method="destroy">
+    <property name="messsage" value="I Love Java"></property>
+  </bean>
+  <bean id="bean" class="com.capgemini.springcore.beans.BeanPostProcessorClass.postProcessBeforeInitialization(Object, String).beanName"><</bean>
+  <bean id="cat" class="com.capgemini.springcore.beans.Cat" primary="true"></bean>
+  <bean id="dog" class="com.capgemini.springcore.beans.Dog" ></bean>
+  <bean id="pet" class="com.capgemini.springcore.beans.Pet" autowire="byName">
+  <!-- <constructor-arg name="name" value="muddhu"></constructor-arg> -->
+ <property name="name" value="muddhu"></property>
+  <!-- <property name="animal" ref="dog"></property> --><!-- if we have object type we should use ref not value -->
+  </bean>
+</beans>

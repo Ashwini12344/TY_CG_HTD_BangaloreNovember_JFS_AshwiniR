@@ -1,0 +1,18 @@
+package com.capgemini.springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class SpringController {
+	@RequestMapping("/hello")
+	public String hello(ModelMap map) {
+		map.addAttribute("msg","Hello world!!!!!!!!!!!!!");
+		return "index";
+	}
+	public String query(ModelMap map) {
+		return "query";
+	}
+
+}

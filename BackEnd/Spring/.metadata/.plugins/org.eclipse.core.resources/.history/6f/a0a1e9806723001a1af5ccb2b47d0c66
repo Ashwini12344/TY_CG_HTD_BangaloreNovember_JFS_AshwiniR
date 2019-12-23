@@ -1,0 +1,26 @@
+package com.capgemini.springcore.beans;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.springframework.context.annotation.ScannedGenericBeanDefinition;
+
+public class Validation {
+	public static void main(String[] args) {
+		System.out.println("name");
+		Scanner sc=new Scanner(System.in);
+		name=sc.next();
+		
+		
+	}
+	public static boolean validateLetters(String txt) {
+
+	    String regx = "[a-zA-Z]+\\.?";
+	    Pattern pattern = Pattern.compile(regx,Pattern.CASE_INSENSITIVE);
+	    Matcher matcher = pattern.matcher(txt);
+	    return matcher.find();
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.capgemini.springcore.beans;
+
+public class Hello {
+	public Hello() {
+		System.out.println("object created");
+	}
+	public Hello(String messsage) {
+		this.messsage=messsage;
+		
+	}
+	private String messsage;
+	public void init() {
+		System.out.println("init method");
+	}
+	public void destroy() {
+		System.out.println("destroy method");
+	}
+
+	public String getMesssage() {
+		return messsage;
+	}
+
+	public void setMesssage(String messsage) {
+		this.messsage = messsage;
+	}
+	
+	
+
+}

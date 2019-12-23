@@ -1,0 +1,19 @@
+package com.capgemini.springcore.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.capgemini.springcore.beans.Hello;
+
+@Configuration
+public class BeansConfig {
+	@Bean("hello") //name of the bean
+	public Hello getHello() {
+		Hello hello=new Hello();
+		hello.setMesssage("I love India");
+	    return hello;
+		
+	}
+	
+
+}

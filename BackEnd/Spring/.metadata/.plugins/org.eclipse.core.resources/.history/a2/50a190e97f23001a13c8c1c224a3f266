@@ -1,0 +1,17 @@
+package com.capgemini.springcore.beans;
+
+public class Book {
+	String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void getAuthor() {
+		System.out.println("Kathey");
+	}
+
+}
