@@ -1,0 +1,5 @@
+package com.capgemini.forestjdbc.controller;
+
+public class OrderDetails {
+
+}

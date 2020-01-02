@@ -1,0 +1,44 @@
+package com.capgemini.forestjdbc.controller;
+
+import java.util.List;
+
+import com.capgemini.forestjdbc.bean.OrderBean;
+import com.capgemini.forestjdbc.dao.OrderDAO;
+import com.capgemini.forestjdbc.factory.Factory;
+
+public class OrderDetails {
+	public static void InsertContact() {
+		ContactDao dao=ContactFactory.instanceOfContactDaoImpl();
+
+		Contact user=new Contact();
+
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Number...");
+		user.setNumber(Integer.parseInt(sc.nextLine()));
+		System.out.println("Enter Name...");
+		user.setName(sc.nextLine());
+		System.out.println("Enter Group...");
+		user.setGroup(sc.nextLine());
+
+		if(dao.insertContact(user)) {
+			System.out.println("Contact inserted");
+		}
+		else {
+			System.err.println("Something went wrong..");
+		}
+	}
+	public static void showOrder() {
+		OrderDAO dao=Factory.instanceOfOrderDAOImpl();
+
+		//Contact user=new Contact();
+
+		List<OrderBean> list=dao.showOrder();
+
+		if(list!=null) {
+			for (OrderBean user1 : list) {
+				System.out.println(user1);
+
+			}
+		}
+
+}

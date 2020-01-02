@@ -1,0 +1,49 @@
+package com.cg.forest.dao;
+
+import java.util.List;
+
+import com.cg.forest.bean.ContractBean;
+
+import java.util.ArrayList;
+
+public class ContractDAOImpl implements ContractDAO {
+	private List<ContractBean> contractbean=new ArrayList<ContractBean>();
+
+	@Override
+	public boolean addContractor(ContractBean bean) {
+		for (ContractBean contractBean : contractbean) {
+			if(contractBean.getCustid()==bean.getCustid()) {
+				return false;
+			}
+			else {
+				contractbean.add(bean);
+				System.out.println("Contract details added");
+				return true;
+				
+				}
+			
+		}
+		return true;
+		
+		
+	}
+
+	@Override
+	public boolean deleteContractor(int custid) {
+		ContractBean bean=null;
+		for (ContractBean contractBean : contractbean) {
+			if(contractBean.getCustid()==custid) {
+				contractbean.remove(bean);
+				return true;
+				}
+		
+			}
+		return true;
+		
+		}
+		
+		}
+			
+	
+
+

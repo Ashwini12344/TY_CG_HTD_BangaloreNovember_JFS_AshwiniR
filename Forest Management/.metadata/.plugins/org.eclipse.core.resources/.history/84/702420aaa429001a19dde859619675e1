@@ -1,0 +1,9 @@
+package com.capgemini.fmshibernate.util;
+
+import com.capgemini.fmshibernate.crud.ContractImpl;
+
+public class Main {
+	public static void main(String[] args) {
+		ContractImpl.addContract();
+	}
+}

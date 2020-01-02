@@ -1,0 +1,67 @@
+package com.capgemini.fmshibernate.crud;
+
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.capgemini.fmshibernate.entity.Contract;
+
+public class ContractImpl {
+	Scanner sc=new Scanner(System.in);
+	
+	public static void addContract() {
+		
+			Contract contract=new Contract();
+			contract.setContract_no(108);
+			contract.setCustomerid(109);
+			contract.setHaulid(110);
+			contract.setProductid(111);
+			contract.setDelivery_date("11/11/19");
+			contract.setDelivery_dat("Thursday");
+			contract.setQuantity(50);
+			EntityManager entityManager=null;
+			EntityTransaction transaction=null;
+
+			
+			try {
+				EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("TestPersistence");
+				entityManager=entityManagerFactory.createEntityManager();
+				transaction=entityManager.getTransaction();
+				transaction.begin();
+				entityManager.persist(contract);
+				System.out.println("record saved..");
+				transaction.commit();
+				entityManager.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+				transaction.rollback();
+			}
+			entityManager.close();
+			}
+		public static void deleteContract(int customerid) {
+			Contract contract=new Contract();
+			EntityManager entityManager=null;
+			EntityTransaction transaction=null;
+			try {
+				EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("TestPersistence");
+				entityManager=entityManagerFactory.createEntityManager();
+				transaction=entityManager.getTransaction();
+				transaction.begin();
+				Contract record=entityManager.find(Contract.class,102);
+				entityManager.remove(record);
+				System.out.println("remove record");
+				transaction.commit();
+			}catch(Exception e) {
+				e.printStackTrace();
+				transaction.rollback();
+			}
+			
+			
+		}
+
+		}
+
+

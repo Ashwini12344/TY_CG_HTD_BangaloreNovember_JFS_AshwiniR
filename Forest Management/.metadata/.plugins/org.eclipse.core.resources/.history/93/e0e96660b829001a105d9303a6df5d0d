@@ -1,0 +1,67 @@
+package com.capgemini.fmshibernate.crud;
+
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.capgemini.fmshibernate.entity.Contract;
+
+public class ContractImpl {
+
+	public static void addContract() {
+		Scanner sc=new Scanner(System.in);
+		while(true) {
+			System.out.println("1.contract");
+			System.out.println("2.Customer");
+			System.out.println("3.Product");
+			System.out.println("Enter your choice");
+			int ch=sc.nextInt();
+			switch(ch) {
+			Contract contract=new Contract();
+			System.out.println("enter Contract no");
+			int contract_no=sc.nextInt();
+			contract.setContract_no(contract_no);
+			System.out.println("enter customer-id");
+			int customerid=sc.nextInt();
+			contract.setCustomerid(customerid);
+			System.out.println("Enter product id");
+			int haulid=sc.nextInt();
+			System.out.println("Enter haulier id");
+			contract.setHaulid(haulid);
+			System.out.println("enter product-id");
+			int productid=sc.nextInt();
+			contract.setProductid(productid);
+			System.out.println("enter delivery date");
+			String delivery_date=sc.next();
+			contract.setDelivery_date(delivery_date);
+			String delivery_dat=sc.next();
+			contract.setDelivery_dat(delivery_dat);
+			int quantity=sc.nextInt();
+			contract.setQuantity(quantity);
+			}
+			EntityManager entityManager=null;
+			EntityTransaction transaction=null;
+
+			try {
+				EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("TestPersistence");
+				entityManager=entityManagerFactory.createEntityManager();
+				transaction=entityManager.getTransaction();
+
+				transaction.begin();
+				entityManager.persist(contract);
+				System.out.println("record saved..");
+				transaction.commit();
+				entityManager.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+				transaction.rollback();
+			}
+			entityManager.close();
+			}
+
+		}
+
+

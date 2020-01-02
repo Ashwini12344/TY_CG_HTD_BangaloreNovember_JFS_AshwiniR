@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="com.cg.forest.bean.ProductBean"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.services.ProductServices"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.bean.ProductBean"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.controller.ProductDetails"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.dao.OrderDAOImpl"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.factory.Factory"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+<fullyQualifiedTypeName name="javax.persistence.Persistence"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
+<fullyQualifiedTypeName name="javax.persistence.Query"/>
+<fullyQualifiedTypeName name="com.capgemini.fmshibernate.entity.Contract"/>
+<fullyQualifiedTypeName name="com.capgemini.fmshibernate.crud.ContractImpl"/>
+<fullyQualifiedTypeName name="com.capgemini.fmshibernate.crud.CustomerImpl"/>
+<fullyQualifiedTypeName name="com.capgemini.fmshibernate.entity.Customer"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="com.capgemini.fmshibernate.bean.Product"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.bean.ContractBean"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.bean.CustomerBean"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.dao.OrderDAO"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.dao.CustomerDAO"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.dao.CustomerDAOImpl"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.services.OrderServices"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.services.OrderServiceImpl"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.bean.OrderBean"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.controller.OrderDetails"/>
+<fullyQualifiedTypeName name="com.capgemini.fmshibernate.dto.CustomerImpl"/>
+<fullyQualifiedTypeName name="com.capgemini.fmshibernate.dto.ProductImpl"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="com.capgemini.forestjdbc.main.ForestApplication"/>
+</qualifiedTypeNameHistroy>

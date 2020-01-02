@@ -1,0 +1,16 @@
+package com.capgemini.fmshibernate.dto;
+
+import java.util.Scanner;
+
+public class ProductImpl {
+static Scanner sc=new Scanner(System.in);
+
+	
+	public static void addProduct() {
+		System.out.println("enter product id");
+		int prodid=sc.nextInt();
+		System.out.println("enter product name");
+		String prodName=sc.next();
+
+}
+}

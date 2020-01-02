@@ -1,0 +1,69 @@
+package com.capgemini.forestjdbc.controller;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.capgemini.forestjdbc.bean.CustomerBean;
+import com.capgemini.forestjdbc.bean.OrderBean;
+import com.capgemini.forestjdbc.dao.OrderDAO;
+import com.capgemini.forestjdbc.factory.Factory;
+import com.capgemini.forestjdbc.main.ForestApplication;
+import com.capgemini.forestjdbc.services.CustomerServices;
+import com.capgemini.forestjdbc.services.OrderServices;
+
+public class OrderDetails {
+		public static void orderDetails() {
+			OrderServices service=Factory.instanceOfOrderServices();
+
+			while(true) {
+				Scanner sc=new Scanner(System.in);
+				System.out.println("1.Add order details");
+				System.out.println("2.Delete order details");
+				System.out.println("3.show order details");
+				System.out.println("4.Back");
+				OrderBean bean=new OrderBean();
+				int ch2=sc.nextInt();
+				switch(ch2) {
+				case 1:System.out.println("Enter customer id");
+				int custid=sc.nextInt();
+				System.out.println("Enter Haulier id");
+				int haulid=sc.nextInt();
+				System.out.println("Enter ProductId");
+				int prodid=sc.nextInt();
+				System.out.println("Enter order no");
+				int orderno=sc.nextInt();
+				System.out.println("Enter deliverydate");
+				String deliverydate=sc.next();
+				System.out.println("Enter quantity");
+				int quantity=sc.nextInt();
+				bean.setCustid(custid);
+				bean.setProdid(prodid);
+		        bean.setHaulid(haulid);
+		        bean.setOrderno(orderno);
+				bean.setDeliverydate(deliverydate);
+				bean.setQuantity(quantity);
+				
+				boolean check=service.addOrder(bean);
+				if(check) {
+					System.out.println("Order added");
+					System.out.println(bean.toString());
+				}
+				break;
+				case 2:System.out.println("enter orderno");
+				int ordernum=sc.nextInt();
+				boolean check3=service.deleteOrder(ordernum);
+				if(check3) {
+					System.out.println("order deleted\n");
+				}
+				else {
+					System.out.println("no order found");
+				}
+				break;
+				
+			}
+		}
+		
+	
+		}
+}
+

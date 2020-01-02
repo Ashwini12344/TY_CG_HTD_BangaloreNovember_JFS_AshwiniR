@@ -1,0 +1,41 @@
+package com.capgemini.fmshibernate.util;
+
+import java.util.Scanner;
+
+import com.capgemini.fmshibernate.crud.ContractImpl;
+import com.capgemini.fmshibernate.crud.CustomerImpl;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+//		System.out.println("1.Contract");
+//		System.out.println("2.Customer");
+//		System.out.println("3.Product");
+		while(true) {
+			System.out.println("1.Add Contract\nPress 2 to delete Contract\nPress 3 to show contract details");
+			int op=sc.nextInt();
+			switch(op) {
+			case 1:ContractImpl.addContract();
+			break;
+			case 2:ContractImpl.deleteContract(102);
+			break;
+			case 3:ContractImpl.showAllContract();
+			break;
+			}
+			while(true) {
+			System.out.println("1.Add customer\n2.Delete customer\n3.Show customer");
+			int option=sc.nextInt();
+			switch(option) {
+			case 1:CustomerImpl.addCustomer();
+			break;
+			case 2:CustomerImpl.deleteCustomer(103);
+				   
+			case 3:CustomerImpl.showAllCustomer();
+			break;
+	}
+
+			}
+		}
+	}
+}
+

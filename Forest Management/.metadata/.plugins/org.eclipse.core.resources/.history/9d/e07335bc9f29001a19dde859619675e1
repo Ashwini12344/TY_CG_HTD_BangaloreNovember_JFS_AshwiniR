@@ -1,0 +1,68 @@
+package com.capgemini.fmshibernate.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="contract")
+public class Contract {
+	@Column
+	private int contractno;
+	@Id
+	@Column
+	private int custid;
+	@Column
+	private int haulid;
+	@Column
+	private int prodid;
+	@Column
+	private int quantity;
+	@Column
+	private String deliverydate;
+	@Column
+	private String deliveryday;
+	public int getContractno() {
+		return contractno;
+	}
+	public void setContractno(int contractno) {
+		this.contractno = contractno;
+	}
+	public int getCustid() {
+		return custid;
+	}
+	public void setCustid(int custid) {
+		this.custid = custid;
+	}
+	public int getHaulid() {
+		return haulid;
+	}
+	public void setHaulid(int haulid) {
+		this.haulid = haulid;
+	}
+	public int getProdid() {
+		return prodid;
+	}
+	public void setProdid(int prodid) {
+		this.prodid = prodid;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public String getDeliverydate() {
+		return deliverydate;
+	}
+	public void setDeliverydate(String deliverydate) {
+		this.deliverydate = deliverydate;
+	}
+	public String getDeliveryday() {
+		return deliveryday;
+	}
+	public void setDeliveryday(String deliveryday) {
+		this.deliveryday = deliveryday;
+	}
+
+}

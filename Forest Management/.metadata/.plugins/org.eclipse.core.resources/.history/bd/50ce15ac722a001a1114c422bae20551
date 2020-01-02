@@ -1,0 +1,5 @@
+package com.capgemini.fmshibernate.dto;
+
+public class ProductImpl {
+
+}

@@ -1,0 +1,5 @@
+package com.capgemini.fmshibernate.crud;
+
+public class Contract {
+
+}

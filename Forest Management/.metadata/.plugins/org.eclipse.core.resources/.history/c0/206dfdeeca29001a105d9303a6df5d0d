@@ -1,0 +1,77 @@
+package com.capgemini.fmshibernate.crud;
+
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.capgemini.fmshibernate.entity.Customer;
+public class CustomerImpl {
+	static Scanner sc=new Scanner(System.in);
+	public static void addCustomer() {
+		System.out.println("Enter Customer id");
+			int custid=sc.nextInt();
+			System.out.println("Enter customer name");
+			String custname=sc.next();
+			while(!custname.matches("[a-zA-Z,]{3,15}+")) {
+				System.err.println("Enter valid name");
+				custname=sc.next();
+				}
+			System.out.println("Enter street address1");
+			String street1=sc.next();
+			System.out.println("Enter street address2");
+			String street2=sc.next();
+			System.out.println("Enter the town");
+			String town=sc.next();
+			System.out.println("Enter pincode");
+			String pin=sc.next();
+			while(!pin.matches("^[0-9]{6}$")) {
+				System.err.println("Enter valid pincode");
+				pin=sc.next();
+
+			}
+			System.out.println("Enter email");
+			String email=sc.next();
+			while(!email.matches("^[A-Za-z0-9+_.-]+@(.+)$")) {	
+				System.out.println("Enter valid email");
+				email=sc.next();
+			}
+			System.out.println("Enter telno");
+			String tel=sc.next();
+			while(!tel.matches("^[0-9]{10}$"))
+			{
+				System.out.println("Enter 10 digit phone number");
+				tel=sc.next();
+
+			}
+			Customer customer=new Customer();
+			customer.setCustid(custid);
+			customer.setCustname(custname);
+			customer.setStreetAddress1(street1);
+			customer.setStreetAddress2(street2);
+			customer.setPostalcode(pin);
+			customer.setTown(town);
+			customer.setEmail(email);
+			customer.setTelno(tel);
+			EntityManager entityManager=null;
+			EntityTransaction transaction=null;
+			try {
+				EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("TestPersistence");
+				entityManager=entityManagerFactory.createEntityManager();
+				transaction=entityManager.getTransaction();
+				transaction.begin();
+				entityManager.persist(customer);
+				System.out.println("customer added successfully..");
+				transaction.commit();
+				entityManager.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+				transaction.rollback();
+			}
+			entityManager.close();
+			}
+	}
+
+

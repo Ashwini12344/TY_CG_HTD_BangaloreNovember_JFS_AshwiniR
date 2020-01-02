@@ -1,0 +1,10 @@
+package com.cg.forest.dao;
+
+import com.cg.forest.bean.ProductBean;
+
+public interface ProductDAO {
+	boolean addProduct(ProductBean bean);
+	boolean modifyProduct(String name);
+	boolean deleteProduct(int prodId);
+
+}

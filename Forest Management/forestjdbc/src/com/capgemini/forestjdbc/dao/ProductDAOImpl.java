@@ -1,0 +1,96 @@
+package com.capgemini.forestjdbc.dao;
+
+import java.sql.Statement;
+import java.io.FileReader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Properties;
+
+import com.capgemini.forestjdbc.bean.ProductBean;
+
+public class ProductDAOImpl implements ProductDAO {
+	FileReader reader;
+	Properties prop;
+	ProductBean user;
+	ResultSet rs;
+	public ProductDAOImpl() {
+		try {
+			reader=new FileReader("db.properties");
+			prop=new Properties();
+			prop.load(reader);
+			Class.forName(prop.getProperty("driverClass"));
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+	}
+@Override
+	public boolean addProduct(ProductBean product) {
+		try(Connection conn=DriverManager.getConnection(prop.getProperty("dbUrl"),prop.getProperty("dbUser"),prop.getProperty("dbPassword"));PreparedStatement pstmt=conn.prepareStatement(prop.getProperty("addProductQuery")); ){
+			pstmt.setInt(1,product.getProdId());
+			pstmt.setString(2, product.getProdName());
+			int count=pstmt.executeUpdate();
+			if(count>0) {
+				return true;
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+				
+	
+	@Override
+	public boolean deleteProduct(int prodId) {
+		try(Connection conn=DriverManager.getConnection(prop.getProperty("dbUrl"),prop.getProperty("dbUser"),prop.getProperty("dbPassword"));PreparedStatement pstmt=conn.prepareStatement(prop.getProperty("deleteProductQuery")); ){	
+			pstmt.setInt(1, prodId);
+			
+			int count=pstmt.executeUpdate();
+		if(count>0) {
+			return true;
+		}
+		else {
+			return false;
+			//System.err.println("something went wrong");
+		}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+
+		
+		return false;
+	}
+
+	@Override
+	public boolean modifyProduct(String prodname) {
+		
+		
+		return false;
+	}
+	public  List<ProductBean> showProduct() {
+		List<ProductBean> list=new ArrayList<ProductBean>();
+		try(Connection conn=DriverManager.getConnection(prop.getProperty("dbUrl"),
+				prop.getProperty("dbUser"),prop.getProperty("dbPassword"));
+				Statement stmt=conn.createStatement();
+				ResultSet rs=stmt.executeQuery(prop.getProperty("query1"))){
+
+			while(rs.next()) {
+				user=new ProductBean();
+				user.setProdId(rs.getInt(1));
+				user.setProdName(rs.getString(2));
+				list.add(user);
+			}
+			return list;
+		}catch(Exception e) {
+			e.getStackTrace();
+		}
+		return null;
+	
+	
+	}
+		
+
+}

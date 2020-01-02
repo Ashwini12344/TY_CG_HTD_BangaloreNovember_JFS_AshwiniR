@@ -1,0 +1,16 @@
+driverClass=com.mysql.jdbc.Driver
+dbUrl=jdbc:mysql://localhost:3306/forestmanagement1
+dbUser=root
+dbPassword=root
+query1=select * from contract
+query2=select * from customer
+query3=select * from product
+query4=select * from order
+addContractQuery=insert into contract values(?,?,?,?,?,?,?)
+deleteContractQuery=delete from contract where contract_no=? 
+addCustomerQuery=insert into customer values(?,?,?,?,?,?,?,?)
+deleteCustomerQuery=delete from customer where customerid=? 
+modifyCustomerQuery=update customer set customerid=? 
+addProductQuery=insert into product values(?,?)
+deleteProductQuery=delete from product where prodId=? 
+addOrderQuery=insert into order values(?,?,?,?,?,?)

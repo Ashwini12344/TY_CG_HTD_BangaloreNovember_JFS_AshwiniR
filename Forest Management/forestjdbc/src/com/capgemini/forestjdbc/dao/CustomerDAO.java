@@ -1,0 +1,10 @@
+package com.capgemini.forestjdbc.dao;
+
+import com.capgemini.forestjdbc.bean.CustomerBean;
+
+public interface CustomerDAO {
+	boolean addCustomer(CustomerBean bean);
+	boolean deleteCustomer(int cudtid);
+	boolean modifyCustomer(int custid,String email);
+
+}

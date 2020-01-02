@@ -1,0 +1,53 @@
+package com.capgemini.forestjdbc.controller;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.capgemini.forestjdbc.bean.OrderBean;
+import com.capgemini.forestjdbc.dao.OrderDAO;
+import com.capgemini.forestjdbc.factory.Factory;
+
+public class OrderDetails {
+	public static void addContact() {
+		OrderDAO dao=Factory.instanceOfOrderDAOImpl();
+
+		OrderBean order=new OrderBean();
+
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter customer id");
+		order.setCustid(Integer.parseInt(sc.nextLine()));
+		System.out.println("Enter Haulier id");
+		order.setHaulid((sc.nextInt()));
+		System.out.println("Enter ProductId");
+		order.setProdid(sc.nextInt());
+		System.out.println("Enter order no");
+		order.setOrderno(sc.nextInt());
+		System.out.println("Enter deliverydate");
+		order.setDeliverydate(sc.next());
+		System.out.println("Enter quantity");
+		order.setQuantity(sc.nextInt());
+		
+
+		if(dao.addOrder(order)) {
+			System.out.println("Order added");
+		}
+		else {
+			System.err.println("Something went wrong..");
+		}
+	}
+	public static void showOrder() {
+		OrderDAO dao=Factory.instanceOfOrderDAOImpl();
+
+		//Contact user=new Contact();
+
+		List<OrderBean> list=dao.showOrder();
+
+		if(list!=null) {
+			for (OrderBean user1 : list) {
+				System.out.println(user1);
+
+			}
+		}
+
+	}
+}
