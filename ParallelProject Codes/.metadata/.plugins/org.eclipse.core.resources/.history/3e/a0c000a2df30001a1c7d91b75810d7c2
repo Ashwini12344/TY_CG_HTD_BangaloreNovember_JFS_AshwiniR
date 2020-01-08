@@ -1,0 +1,17 @@
+package com.cg.forest.manager;
+
+import com.capgemini.forest.dao.ContractDAO;
+import com.capgemini.forest.dao.ContractDAOImpl;
+import com.capgemini.forest.dao.CustomerDAO;
+import com.capgemini.forest.dao.CustomerDAOImpl;
+
+public class ContractDAOManager {
+	public static ContractDAO getContractDAO() {
+		return new ContractDAOImpl();
+	}
+
+	public static CustomerDAO getCustomerDAO() {
+		return new CustomerDAOImpl();
+	}
+
+}

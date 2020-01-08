@@ -1,0 +1,60 @@
+package com.capgemini.fmshibernate.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.capgemini.fmshibernate.bean.Contract;
+import com.capgemini.fmshibernate.bean.Customer;
+
+public class CustomerDAOImpl implements CustomerDAO{
+	private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("TestPersistence");
+	@Override
+	public boolean addCustomer(Customer bean) {
+		boolean isAdd=false;
+		EntityManager manager=entityManagerFactory.createEntityManager();
+		EntityTransaction transaction=null;	
+		try {
+			transaction=manager.getTransaction();
+			transaction.begin();
+	        manager.persist(bean);
+			System.out.println("customer added ..");
+			transaction.commit();
+			isAdd=true;	
+		}catch(Exception e) {
+			e.printStackTrace();
+			transaction.rollback();
+		}
+		manager.close();
+		return isAdd;
+		
+	
+	}
+
+	@Override
+	public boolean modifyCustomer(String emai) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteCustomer(int customerid) {
+		boolean isDeleted=false;
+		EntityManager manager=entityManagerFactory.createEntityManager();
+		EntityTransaction transaction=null;	
+		Customer bean=manager.find(Customer.class,customerid);
+		if(bean!=null) {
+			transaction=manager.getTransaction();
+			transaction.begin();
+	        manager.remove(bean);
+			transaction.commit();
+			isDeleted=true;	
+		}		
+		manager.close();
+		return isDeleted;
+	}
+
+	}
+
+

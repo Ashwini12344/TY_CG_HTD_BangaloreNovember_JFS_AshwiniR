@@ -1,0 +1,69 @@
+package com.capgemini.fmshibernate.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.capgemini.fmshibernate.bean.Contract;
+
+public class ContractDAOImpl implements ContractDAO{
+	Contract contract=new Contract();
+	EntityManager entityManager=null;
+	EntityTransaction transaction=null;
+
+	@Override
+	public boolean addContractor(Contract bean) {
+		
+		try {
+			EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("TestPersistence");
+			entityManager=entityManagerFactory.createEntityManager();
+			transaction=entityManager.getTransaction();
+			transaction.begin();
+			entityManager.persist(contract);
+			System.out.println("contractor added ..");
+			transaction.commit();
+			entityManager.close();
+		}catch(Exception e) {
+			e.printStackTrace();
+			transaction.rollback();
+		}
+		entityManager.close();
+		return false;
+		}
+	
+	
+	
+
+	@Override
+	public boolean deleteContractor(int contractNo) {
+		try {
+			EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("TestPersistence");
+			entityManager=entityManagerFactory.createEntityManager();
+			transaction=entityManager.getTransaction();
+			transaction.begin();
+//			System.out.println("Enter custid to delete");
+//			customerid=sc.nextInt();
+			Contract record=entityManager.find(Contract.class,customerid);
+			entityManager.remove(record);
+			System.out.println("contract deleted");
+			transaction.commit();
+		}catch(Exception e) {
+			e.printStackTrace();
+			transaction.rollback();
+		}
+		
+		entityManager.close();
+	
+		return false;
+	}
+
+	@Override
+	public List<Contract> showContract() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

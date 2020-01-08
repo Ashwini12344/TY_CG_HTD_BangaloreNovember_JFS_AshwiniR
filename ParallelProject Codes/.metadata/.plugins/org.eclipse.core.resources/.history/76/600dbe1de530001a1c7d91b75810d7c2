@@ -1,0 +1,12 @@
+package com.capgemini.fmshibernate.dao;
+
+import com.capgemini.fmshibernate.bean.Customer;
+
+public interface CustomerDAO {
+	boolean addCustomer(Customer bean);
+
+	boolean modifyCustomer(String emai);
+
+	boolean deleteCustomer(int customerid);
+
+}

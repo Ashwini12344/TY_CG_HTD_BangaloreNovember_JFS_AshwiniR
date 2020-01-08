@@ -1,0 +1,12 @@
+package com.cg.forest.dao;
+import java.util.List;
+
+import com.capgemini.forest.bean.ProductBean;
+
+public interface ProductDAO {
+	boolean addProduct(ProductBean bean);
+	boolean modifyProduct(String name);
+	boolean deleteProduct(int prodId);
+	public List<ProductBean> showProduct();
+
+}
