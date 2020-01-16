@@ -1,0 +1,22 @@
+package com.capgemini.forestmgtboot.controller;
+
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.forestmgtboot.dto.ContractResponse;
+import com.capgemini.forestmgtboot.dto.UserResponse;
+import com.capgemini.forestmgtboot.exception.CustomerException;
+
+@RestController
+public class UserControllerAdvice {
+@ExceptionHandler(UserException.class)//handle exception in spring
+	
+	public UserResponse handleEmployeeException(CustomerException e) {
+	UserResponse response=new UserResponse();
+		response.setStatusCode(501);
+		response.setMessage("Exception");
+		response.setDescription(e.getMessage());
+		return response;
+	}
+
+}

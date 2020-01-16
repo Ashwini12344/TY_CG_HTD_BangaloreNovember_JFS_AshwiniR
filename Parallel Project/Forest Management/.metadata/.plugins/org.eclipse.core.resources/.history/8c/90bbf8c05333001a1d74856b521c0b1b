@@ -1,0 +1,14 @@
+package com.capgemini.forestmgtboot.dao;
+
+import java.util.List;
+
+import com.capgemini.fmshibernate.bean.Contract;
+
+public interface ContractDAO {
+	boolean addContractor(Contract bean);
+
+	boolean deleteContractor(int contractNo);
+
+	public List<Contract> showContract();
+
+}

@@ -1,0 +1,74 @@
+package com.capgemini.forestjdbc.dao;
+
+import java.io.FileReader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.HashMap;
+import java.util.Properties;
+import java.util.Set;
+
+import com.capgemini.forestjdbc.bean.LandBean;
+
+
+public class LandDaoImpl implements LandDao{
+	FileReader reader;
+	Properties prop;
+
+	public LandDaoImpl() {
+		try {
+			reader = new FileReader("db.properties");
+			prop = new Properties();
+			prop.load(reader);
+			Class.forName(prop.getProperty("driverClass"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void showAllLands() {
+		
+	}
+
+	@Override
+	public boolean addLand(LandBean land) {
+		try (Connection conn = DriverManager.getConnection(prop.getProperty("dbUrl"), prop.getProperty("dbUser"),
+				prop.getProperty("dbPassword"));
+				PreparedStatement pstmt = conn.prepareStatement(prop.getProperty("addLandQuery"));) {
+
+			pstmt.setInt(1, land.getLandId());
+			pstmt.setString(2, land.getLandLoc());
+			pstmt.setInt(3,land.getLandVal());
+			pstmt.setString(4,land.getAcqDate());
+			
+			int count = pstmt.executeUpdate();
+			if (count > 0) {
+				return true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	@Override
+	public boolean modifyLand(LandBean lbean) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removeLand(int landId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public LandBean searchLand(int landId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

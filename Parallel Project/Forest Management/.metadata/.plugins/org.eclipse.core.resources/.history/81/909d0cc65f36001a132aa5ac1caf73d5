@@ -1,0 +1,45 @@
+package com.capgemini.forestcollection.util;
+import java.util.Scanner;
+public class Admin {
+	public static void main(String[] args) {
+
+	    String Username;
+	    String Password;
+
+	    Password = "admin";
+	    Username = "admin";
+
+	    Scanner input1 = new Scanner(System.in);
+	    System.out.println("Enter Username : ");
+	    String username = input1.next();
+
+	    Scanner input2 = new Scanner(System.in);
+	    System.out.println("Enter Password : ");
+	    String password = input2.next();
+
+	    if (username.equals(Username) && password.equals(Password)) {
+
+	        System.out.println("Access Granted! Welcome!\n");
+	        ForestApp1.main(args);
+	    }
+
+	    else if (username.equals(Username)) {
+	        System.out.println("Invalid Password!");
+	        System.out.println("Enter valid password");
+	        password=input2.next();
+	    } else if (password.equals(Password)) {
+	        System.out.println("Invalid Username!");
+	        System.out.println("Enter valid username");
+	        username=input1.next();
+	    } else {
+	        System.out.println("Invalid Username & Password!");
+	        System.out.println("Enter valid username");
+	        username=input1.next();
+	        System.out.println("Enter valid password");
+	        password=input2.next();
+	        
+	    }
+
+	}
+
+}

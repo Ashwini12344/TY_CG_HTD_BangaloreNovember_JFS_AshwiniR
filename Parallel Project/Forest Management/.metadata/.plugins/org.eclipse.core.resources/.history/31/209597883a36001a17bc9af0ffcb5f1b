@@ -1,0 +1,21 @@
+package com.capgemini.springrest.controller;
+
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.springrest.dto.ContractResponse;
+import com.capgemini.springrest.exception.CustomerException;
+
+@RestController
+public class CustomerControllerAdvice {
+	@ExceptionHandler(CustomerException.class)//handle exception in spring
+	
+	public ContractResponse handleEmployeeException(CustomerException e) {
+		ContractResponse response=new ContractResponse();
+		response.setStatusCode(501);
+		response.setMessage("Exception");
+		response.setDescription(e.getMessage());
+		return response;
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.capgemini.forestjdbc.dao;
+
+import java.util.List;
+
+import com.capgemini.forestjdbc.bean.LandBean;
+
+public interface LandDao {
+	public List<LandBean> showAllLands();
+
+	public boolean addLand(LandBean land);
+
+	public boolean modifyLand(LandBean lbean);
+
+	public boolean removeLand(int landId);
+
+}

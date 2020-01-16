@@ -1,0 +1,12 @@
+package com.capgemini.forestcollection.manager;
+import com.capgemini.forestcollection.bean.*;
+import com.capgemini.forestcollection.dao.ProductDAO;
+import com.capgemini.forestcollection.dao.ProductDAOImpl;
+
+import java.util.Scanner;
+
+public class ProductDAOManager {
+	public static ProductDAO getProductDAO() {
+		return new ProductDAOImpl();
+	}
+}

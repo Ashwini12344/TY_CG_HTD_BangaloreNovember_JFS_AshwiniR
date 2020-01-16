@@ -1,0 +1,10 @@
+1578613823076	Delete element
+1578613879583	Rename package 'com.capgemini.fmshibernate.bean'
+1578613985429	Delete element
+1578615730575	Rename type 'Contract'
+1578615747810	Rename type 'Customer'
+1578615763115	Rename type 'Product'
+1578615859957	Delete element
+1578616044333	Rename type 'ProductDAO'
+1578624261415	Delete element
+1578625280389	Rename type 'ContractDaoImpl'

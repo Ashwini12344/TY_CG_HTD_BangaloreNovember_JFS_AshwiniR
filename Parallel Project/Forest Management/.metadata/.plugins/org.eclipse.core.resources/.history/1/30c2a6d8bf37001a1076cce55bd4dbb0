@@ -1,0 +1,30 @@
+package com.capgemini.forestjdbc.services;
+
+import java.util.List;
+
+import com.capgemini.forestjdbc.bean.LandBean;
+import com.capgemini.forestjdbc.dao.CustomerDAO;
+import com.capgemini.forestjdbc.dao.LandDao;
+import com.capgemini.forestjdbc.factory.Factory;
+
+public class LandServiceImpl implements LandServices {
+	LandDao dao=Factory.instanceOfLandDaoImpl();
+
+	@Override
+	public List<LandBean> showAllLands() {
+		return ;
+	}
+
+	@Override
+	public boolean addLand(LandBean land) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removeLand(int landId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

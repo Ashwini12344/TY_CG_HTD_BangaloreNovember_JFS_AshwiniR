@@ -1,0 +1,5 @@
+package com.capgemini.forestmgtboot.config;
+
+public class ORMConfig {
+
+}

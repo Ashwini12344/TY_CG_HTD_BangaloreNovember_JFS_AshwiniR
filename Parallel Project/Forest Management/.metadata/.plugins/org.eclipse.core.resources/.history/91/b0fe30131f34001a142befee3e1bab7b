@@ -1,0 +1,35 @@
+package com.capgemini.forestmgtboot.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.Data;
+@Data
+@Entity
+@Table(name="customer")
+public class CustomerBean {
+	@JsonIgnore
+	@Id
+	@Column
+	private int customerid;
+	@Column(unique=true,nullable=false)
+	private String customer_name;
+	@Column
+	private String street_address1;
+	@Column
+	private String  street_address2;
+	@Column
+	private String town;
+	@Column
+	private String postal_code;
+	@Column
+	private String email;
+	@Column
+	private String telephone;
+	
+
+}

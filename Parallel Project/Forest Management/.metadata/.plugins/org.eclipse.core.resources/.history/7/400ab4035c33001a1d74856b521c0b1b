@@ -1,0 +1,16 @@
+package com.capgemini.forestmgtboot.dao;
+
+import java.util.List;
+
+import com.capgemini.fmshibernate.bean.Contract;
+import com.capgemini.fmshibernate.bean.Customer;
+
+public interface CustomerDAO {
+	boolean addCustomer(Customer bean);
+
+	boolean modifyCustomer(String emai);
+
+	boolean deleteCustomer(int customerid);
+	public List<Customer> showCustomer();
+
+}

@@ -1,0 +1,5 @@
+package com.capgemini.forestmgtrest.dao;
+
+public class ContractDAOImpl {
+
+}

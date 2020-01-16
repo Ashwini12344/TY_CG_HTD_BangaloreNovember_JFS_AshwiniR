@@ -1,0 +1,85 @@
+package com.capgemini.forestmgtboot.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="customer")
+public class Customer {
+	@Id
+	@Column
+	private int customerid;
+	@Column
+	private String customer_name;
+	@Column
+	private String street_address1;
+	@Column
+	private String  street_address2;
+	@Column
+	private String town;
+	@Column
+	private String postal_code;
+	@Column
+	private String email;
+	@Column
+	private String telephone;
+	public int getCustomerid() {
+		return customerid;
+	}
+	public void setCustomerid(int customerid) {
+		this.customerid = customerid;
+	}
+	public String getCustomer_name() {
+		return customer_name;
+	}
+	public void setCustomer_name(String customer_name) {
+		this.customer_name = customer_name;
+	}
+	public String getStreet_address1() {
+		return street_address1;
+	}
+	public void setStreet_address1(String street_address1) {
+		this.street_address1 = street_address1;
+	}
+	public String getStreet_address2() {
+		return street_address2;
+	}
+	public void setStreet_address2(String street_address2) {
+		this.street_address2 = street_address2;
+	}
+	public String getTown() {
+		return town;
+	}
+	public void setTown(String town) {
+		this.town = town;
+	}
+	public String getPostal_code() {
+		return postal_code;
+	}
+	public void setPostal_code(String postal_code) {
+		this.postal_code = postal_code;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getTelephone() {
+		return telephone;
+	}
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+	@Override
+	public String toString() {
+		return "Customer [customerid=" + customerid + ", customer_name=" + customer_name + ", street_address1="
+				+ street_address1 + ", street_address2=" + street_address2 + ", town=" + town + ", postal_code="
+				+ postal_code + ", email=" + email + ", telephone=" + telephone + "]";
+	}
+	
+	
+
+}

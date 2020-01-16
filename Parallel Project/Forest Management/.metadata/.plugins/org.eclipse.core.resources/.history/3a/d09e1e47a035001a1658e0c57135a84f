@@ -1,0 +1,13 @@
+package com.capgemini.forestmgtrest.config;
+@Configuration
+public class ORMConfig {
+	@Bean
+	public LocalEntityManagerFactoryBean getLocalEntityManagerFactoryBean() {
+		LocalEntityManagerFactoryBean bean=new LocalEntityManagerFactoryBean();
+		bean.setPersistenceUnitName("forest-unit");
+		return bean;
+	}
+	
+
+
+}

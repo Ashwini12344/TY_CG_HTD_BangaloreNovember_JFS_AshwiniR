@@ -1,0 +1,6 @@
+package com.capgemini.forestmgtboot.dao;
+public interface UserDAO {
+	public boolean register(User user);
+	public User login(String email,String password);
+	
+}

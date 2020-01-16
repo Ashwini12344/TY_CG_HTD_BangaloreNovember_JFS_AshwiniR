@@ -1,0 +1,20 @@
+package com.capgemini.forestmgtboot.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
+public class Product {
+	@Id
+	@Column
+	private int prodId;
+	@Column
+	private String prodName;
+	@Column
+	private String prodDescription;
+	@Column
+	private double productCost;
+}

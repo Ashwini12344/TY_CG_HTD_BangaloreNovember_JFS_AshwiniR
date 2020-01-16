@@ -1,0 +1,38 @@
+package com.capgemini.forestcollection.dao;
+
+import com.capgemini.forestcollection.bean.LandBean;
+
+public class LandDaoImpl implements LandDao{
+
+	@Override
+	public void showAllLands() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean addLand(LandBean land) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean modifyLand(int custId, LandBean lbean) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removeLand(int custId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public LandBean searchLand(int custId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

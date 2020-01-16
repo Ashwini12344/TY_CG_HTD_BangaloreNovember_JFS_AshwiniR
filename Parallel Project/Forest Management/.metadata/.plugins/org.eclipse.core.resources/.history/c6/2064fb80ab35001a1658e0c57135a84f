@@ -1,0 +1,14 @@
+package com.capgemini.forestmgtboot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ForestmgtbootApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ForestmgtbootApplication.class, args);
+	}
+
+}
+xmmm

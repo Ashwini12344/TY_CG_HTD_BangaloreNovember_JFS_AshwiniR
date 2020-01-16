@@ -1,0 +1,5 @@
+package com.capgemini.forestcollection.dao;
+
+public class LandDaoImpl {
+
+}

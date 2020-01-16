@@ -1,0 +1,8 @@
+package com.capgemini.forestmgtboot.exception;
+
+public class ContractException {
+	public ProductException(String message) {
+		super(message);
+	}
+
+}

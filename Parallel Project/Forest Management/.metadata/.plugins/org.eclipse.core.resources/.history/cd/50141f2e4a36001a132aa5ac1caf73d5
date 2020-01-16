@@ -1,0 +1,25 @@
+package com.capgemini.forestmgtboot.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.capgemini.forestmgtboot.dao.UserDAO;
+import com.capgemini.forestmgtboot.dto.UserBean;
+
+@Service
+public class UserServiceImpl implements UserService {
+	@Autowired
+	private UserDAO dao;
+	
+	@Override
+	public boolean register(UserBean user) {
+		return dao.register(user);
+		
+	}
+
+	@Override
+	public User login(String email, String password) {
+		return dao.login(email, password);
+	}
+
+}
