@@ -1,0 +1,26 @@
+<div class="alert alert-danger" *ngIf='message'>{{message}}
+    <span class="float-right">
+        <button (click)='deleteMessage()'>&times;</button>
+    </span>
+</div>
+<div class="col-md-3 float-left mt-3" *ngFor='let product of products | filterProducts: search'>
+    <div class="card">
+        <div class="card-header">
+            {{product.name}}
+        </div>
+        <div class="card-body">
+            <img [src]="product.url" alt="product image" height="200px" width="100%">
+            <p>Rs:{{product.price}}.00</p>
+        </div>
+        <div class="card-footer">
+            <div class="btn-group col-md-12">
+                <button class="btn btn-outline-success" (click)='selectProduct(product)'>
+                    Update
+                </button>
+                <button class="btn btn-outline-dark" (click)='deleteProduct(product)'>
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
