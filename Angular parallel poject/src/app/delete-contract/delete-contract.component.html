@@ -1,0 +1,25 @@
+<!-- <div class="col-md-4 offset-4 mt-3 mb-3">
+    <input type="search" name="search" class="form-control" [(ngModel)]='search' placeholder="Enter product name to search">
+</div> -->
+<form #deleteContractForm='ngForm' (ngSubmit)='deleteContract(contractno)'>
+<div class="alert alert-danger" *ngIf='message'>{{message}}
+    <span class="float-right">
+        <button (click)='deleteMessage()'>&times;</button>
+    </span>
+</div>
+<!-- <div class="col-md-3 float-left mt-3" *ngFor='let product of products | filterProducts: search'> -->
+    <div class="col-md-3 offset-md-4 mt-3 ">
+        <div class="form-group">
+            <label for="contractno">Contractno</label>
+            <input type="text" name="contractno" #contractno='ngModel' ngModel class="form-control" required >
+        </div>
+    
+            <div class="btn-group col-md-4">
+                <!-- <button class="btn btn-outline-success" (click)='selectContract(contract)'>
+                    Update
+                </button> -->
+                <button type="submit" class="btn btn-outline-primary float-right">Delete</button>
+            </div>
+        </div>
+</form>        
+    <!-- </div> -->

@@ -1,0 +1,84 @@
+<div class="jumbotron">
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="col-md-4 offset-md-4 mt-4">
+    <form #addCustomerForm='ngForm' (ngSubmit)='addCustomer(addCustomerForm)'>
+    <div class="form-group">
+        <label for="customerid">CustomerId</label>
+        <input type="text" name="customerid" id="customerid" maxlength="3" #customerid='ngModel' ngModel  required pattern="[0-9]{3}" class="form-control">
+        <div *ngIf='customerid.invalid && customerid.touched'>
+            <div class="alert alert-danger" *ngIf='customerid.errors.pattern'>
+                This field takes 3 digit number
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="customerName">Customer Name</label>
+        <input type="text" name="customerName"  minlength="3" maxlength="15" #customerName='ngModel' ngModel  required pattern="[a-zA-Z,]{3,15}" class="form-control">
+        <div *ngIf='customerName.touched && customerName.invalid'>
+            <div class="alert alert-danger" *ngIf='customerName.errors.pattern'>
+                Minimum 3 characters required
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" minlength="8" required #email='ngModel' ngModel
+            class="form-control" email>
+        <div *ngIf='email.touched && email.invalid'>
+            <div class="alert alert-danger" *ngIf='email.errors.required'>
+                This field is mandatory
+            </div>
+            <div class="alert alert-danger" *ngIf='email.errors.minlength'>
+                Minimum 8 characters are required
+            </div>
+            <div class="alert alert-danger" *ngIf='email.errors.email'>
+                This field only accepts email
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="postalcode">postalcode</label>
+        <input type="text" name="postalcode" id="postalcode" minlength="6" maxlength="6" #postalcode='ngModel' ngModel required pattern="[0-9]{6}"class="form-control">
+        <div *ngIf='postalcode.invalid && postalcode.touched'>
+            <div class="alert alert-danger" *ngIf='postalcode.errors.pattern'>
+             Pin should be 6 digit
+            </div>
+       </div>
+       
+    </div>
+   
+    <div class="form-group">
+        <label for="streetAddress1">Street Address1</label>
+        <input type="text" name="streetAddress1" id="streetAddress1" minlength="3"  #streetAddress1='ngModel' ngModel required pattern="[a-zA-Z,]{3,25}" class="form-control">
+        <!-- <div class="alert alert-danger" *ngIf='streetAddress1.errors.pattern'>
+            Enter valid address
+        </div> -->
+    </div>
+    <div class="form-group">
+        <label for="streetAddress2">Street Address2</label>
+        <input type="text" name="streetAddress2" id="streetAddress2" #streetAddress2='ngModel' ngModel required pattern="[a-zA-Z,]{3,30}" class="form-control">
+        <!-- <div class="alert alert-danger" *ngIf='streetAddress2.errors.pattern'>
+            Enter valid address
+        </div> -->
+    </div>
+   <div class="form-group">
+        <label for="telephone">Telephone</label>
+        <input type="phone" name="telephone" id="telephone" minlength="10" maxlength="10" #telephone='ngModel' ngModel class="form-control"
+                required pattern="^[0-9]{10}$">
+                <div *ngIf='telephone.invalid && telephone.touched'>
+                    <div class="alert alert-danger" *ngIf='telephone.errors.pattern'>
+                        This field takes only phone number
+                    </div>
+                    <div class="alert alert-danger" *ngIf='telephone.errors.minlength'>
+                        Maximum 10 characters are required
+                    </div>
+                 </div>
+    </div>
+    <div class="form-group">
+        <label for="town">Town</label>
+        <input type="text" name="town" id="town" #town='ngModel' ngModel required class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success float-right">Add Customer</button>
+    </form>
+</div>
+</div>

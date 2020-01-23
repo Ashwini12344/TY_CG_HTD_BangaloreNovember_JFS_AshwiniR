@@ -1,0 +1,37 @@
+<div class="alert alert-success" *ngIf='description'>{{description}}
+    <span class="float-right">
+        <button (click)='deleteMessage()'>&times;</button>
+    </span>
+</div>
+<table class="table table-bordered table dark">
+    <thead>
+        <tr class="bg-light">
+            <th>ScheduleId</th>
+            <th>ProductId</th>
+            <th>ContractNo</th>
+            <th>DeliveryDate</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let schedule of schedules">
+            <td>{{schedule.scheduleId}}</td>
+            <td>{{schedule.prodId}}</td>
+            <td>{{schedule.ContractNo}}</td>
+            <td>{{schedule.deliveryDate}}</td>
+            <td>{{schedule.quantity}}</td>
+            <!-- <button class="btn btn-outline-success" (click)='selectContract(contract)'>
+                Update
+            </button> -->
+            <button class="btn btn-dark" (click)='deleteSchedule(schedule)'>
+                Delete
+            </button>
+        </tr>
+    </tbody>
+</table>
+<!-- <div class="card-footer">
+    <div class="btn-group col-md-2 float-right"> -->
+        
+    <!-- </div>
+</div> -->
+

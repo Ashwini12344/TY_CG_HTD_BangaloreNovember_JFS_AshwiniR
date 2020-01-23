@@ -1,0 +1,26 @@
+<div class="background">
+      <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+    <div class="col-md-4 offset-md-4 mt-8"><br>
+        <form #addProductForm='ngForm' (ngSubmit)='addProduct(addProductForm)'>
+            <div class="form-group">
+                <label for="prodId"><h6 style="color: black;">PRODUCT ID</h6></label>
+                <input type="text" name="prodId" id="prodId" #prodId='ngModel' ngModel class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="prodName"><h6 style="color: black;">PRODUCT NAME</h6></label>
+                <input type="text" name="prodName" #prodName='ngModel' ngModel class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="prodDescription"><h6 style="color: black;">PRODUCT DESCRIPTION</h6></label>
+                <input type="text" name="prodDescription" id="prodDescription" #prodDescription='ngModel' ngModel
+                    required pattern="[0-9]{10}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="cost"><h6 style="color: black;">PRODUCT COST</h6></label>
+                <input type="text" name="cost" id="cost" #productCost='ngModel' ngModel required pattern="[0-9]{10}"
+                    class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success float-right">ADD PRODUCT</button>
+        </form>
+    </div>
+</div>

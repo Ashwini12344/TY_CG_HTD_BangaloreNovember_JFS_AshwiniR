@@ -1,0 +1,39 @@
+<div class="alert alert-success" *ngIf='description'>{{description}}
+    <span class="float-right">
+        <button (click)='deleteMessage()'>&times;</button>
+    </span>
+</div>
+<table class="table table-bordered table dark">
+    <thead>
+        <tr class="bg-light">
+            <th>ContractNo</th>
+            <th>CustomerId</th>
+            <th>DeliveryDate</th>
+            <th>HaulId</th>
+            <th>ProductId</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contract of contracts">
+            <td>{{contract.contractNo}}</td>
+            <td>{{contract.customerId}}</td>
+            <td>{{contract.deliveryDate}}</td>
+            <td>{{contract.haulId}}</td>
+            <td>{{contract.productId}}</td>
+            <td>{{contract.quantity}}</td>
+            <!-- <button class="btn btn-outline-success" (click)='selectContract(contract)'>
+                Update
+            </button> -->
+            <button class="btn btn-dark" (click)='deleteContractor(contract)'>
+                Delete
+            </button>
+        </tr>
+    </tbody>
+</table>
+<!-- <div class="card-footer">
+    <div class="btn-group col-md-2 float-right"> -->
+        
+    <!-- </div>
+</div> -->
+

@@ -1,0 +1,29 @@
+<div class="alert alert-danger" *ngIf='message'>{{message}}
+    <span class="float-right">
+        <button (click)='deleteMessage()'>&times;</button>
+    </span>
+</div>
+<table class="table table-bordered table dark">
+    <thead>
+        <tr class="bg-light">
+            <th>ProdId</th>
+            <th>ProdName</th>
+            <th>ProdDescription</th>
+            <th>Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.prodId}}</td>
+            <td>{{product.prodName}}</td>
+            <td>{{product.prodDescription}}</td>
+            <td>{{product.cost}}</td>
+            <button class="btn btn-outline-success" (click)='selectProduct(product)'>Update</button>
+            <button class="btn btn-outline-dark" (click)='deleteProduct(product)'> Delete </button>
+        </tr>
+    </tbody>
+</table>
+
+   
+
+<!-- </div> -->

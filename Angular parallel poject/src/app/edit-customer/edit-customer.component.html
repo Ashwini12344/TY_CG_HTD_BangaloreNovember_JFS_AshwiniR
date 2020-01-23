@@ -1,0 +1,49 @@
+<div class="alert alert-success" *ngIf='message'>
+    {{message}}</div>
+<div class=" card col-md-4 offset-md-4 mt-4">
+    <div class="card-body">
+        <h4 class="text-center">Update Customer Details!!</h4><br>
+        <form #updateCustomerForm='ngForm' (ngSubmit)='updateCustomer(updateCustomerForm)'>
+
+            <!-- <div class="form-group">
+                <label for="customerId">Customer Id</label>
+                <input type="text" name="customerId" id="customerId" #customerId='ngModel' [(ngModel)]='customerDetails.customerId' class="form-control" required>
+            </div> -->
+
+            <input type="text" name="customerid" id="customerid" #customerid='ngModel' [(ngModel)]='customerId1' class="form-control">
+
+            <div clas="form-group">
+                <label for="customerName">Customer Name</label>
+                <input type="text" name="customerName" id="customerName" #customerName='ngModel' [(ngModel)]='customerName1' required class="form-control">
+            </div>
+            <div clas="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" #email='ngModel' [(ngModel)]='email1' required class="form-control">
+            </div>
+            <div clas="form-group">
+                <label for="postalcode">PostalCode</label>
+                <input type="text" name="postalCode" id="postalcode" #postalcode='ngModel' [(ngModel)]='postalcode1' required class="form-control">
+            </div>
+            <div clas="form-group">
+                <label for="streetAddress1">StreetAddress1</label>
+                <input type="text" name="streetAddress1" id="streetAddress1" #streetAddress1='ngModel' [(ngModel)]='streetAddress11' required class="form-control">
+            </div>
+            <div clas="form-group">
+                <label for="streetAddress2">StreetAddress2</label>
+                <input type="text" name="streetAddress2" id="streetAddress2" #streetAddress2='ngModel' [(ngModel)]='streetAddress21' required class="form-control">
+            </div>
+            <div clas="form-group">
+                <label for="telephone">TelephoneNo</label>
+                <input type="text" name="telephone" id="telephone" #telephone='ngModel' [(ngModel)]='telephone1' required class="form-control">
+            </div>
+            <div clas="form-group">
+                <label for="town">Town</label>
+                <input type="text" name="town" id="town" #town='ngModel' [(ngModel)]='town1' required class="form-control">
+            </div>
+            
+            <br>
+            <!-- <div class="col-mb-6"> -->
+            <button type="submit" class="btn btn-outline-info float-right">Update Customer</button>
+            <!-- </div> -->
+        </form>
+    </div>

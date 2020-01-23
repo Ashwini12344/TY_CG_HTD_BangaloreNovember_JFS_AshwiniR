@@ -1,0 +1,42 @@
+<div class="alert alert-danger" *ngIf='message'>{{message}}
+    <span class="float-right">
+        <button (click)='deleteMessage()'>&times;</button>
+    </span>
+</div>
+<table class="table table-bordered table dark">
+    <thead>
+        <tr class="bg-light">
+            <th>CustomerId</th>
+            <th>CustomerName</th>
+            <th>Email</th>
+            <th>PostalCode</th>
+            <th>StreetAddress1</th>
+            <th>StreetAddress2</th>
+            <th>Telephone</th>
+            <th>Town</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.customerid}}</td>
+            <td>{{customer.customerName}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.postalcode}}</td>
+            <td>{{customer.streetAddress1}}</td>
+            <td>{{customer.streetAddress2}}</td>
+            <td>{{customer.telephone}}</td>
+            <td>{{customer.town}}</td>
+            <button class="btn btn-outline-success" (click)='selectCustomer(customer)'>
+                Update
+            </button>
+            <button class="btn btn-outline-dark" (click)='deleteCustomer(customer)'>
+                Delete
+            </button>
+       
+    
+        </tr>
+    </tbody>
+</table>
+<!-- <div class="card-footer"> -->
+    
+       
