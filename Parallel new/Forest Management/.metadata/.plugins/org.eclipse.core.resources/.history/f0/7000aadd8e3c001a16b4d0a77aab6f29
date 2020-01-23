@@ -1,0 +1,26 @@
+package com.capgemini.fmshibernate.bean;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@SuppressWarnings("serial")
+
+@Entity
+@Table(name = "land")
+public class Land  {
+	@Id
+	@Column
+	private int landId;
+	@Id
+	private String landLoc;
+	@Id
+	private int landVal;
+	@Id
+	private String acqDate;
+
+}

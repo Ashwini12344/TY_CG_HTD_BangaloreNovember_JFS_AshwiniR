@@ -1,0 +1,29 @@
+package com.capgemini.forestmgtboot.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "contract")
+public class ContractBean {
+	@Id
+	@Column(unique = true, nullable = false)
+	private int contractno;
+	@Column
+	private int customerid;
+	@Column
+	private int haulid;
+	@Column
+	private int productid;
+	@Column
+	private int quantity;
+	@Column
+	private String deliverydate;
+	
+}

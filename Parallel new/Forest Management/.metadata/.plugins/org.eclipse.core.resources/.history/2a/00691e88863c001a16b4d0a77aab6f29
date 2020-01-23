@@ -1,0 +1,45 @@
+package com.capgemini.forestjdbc.main;
+
+import java.util.Scanner;
+import com.capgemini.forestjdbc.controller.ContractController;
+import com.capgemini.forestjdbc.controller.CustomerDetails;
+import com.capgemini.forestjdbc.controller.LandDetails;
+import com.capgemini.forestjdbc.controller.ProductDetails;
+
+
+public class ForestApplication {
+	public static void main(String[] args) {
+		@SuppressWarnings("resource")
+		Scanner sc=new Scanner(System.in);
+		try {
+		while(true) {
+			System.out.println("1.contract");
+			System.out.println("2.Customer");
+			System.out.println("3.Product");
+			System.out.println("4.Land");
+			System.out.println("4.Back\n");
+			System.out.println("Enter your choice");
+			int ch=sc.nextInt();
+			switch(ch) {
+			case 1:ContractController.contractDetails();
+			break;
+			case 2:CustomerDetails.customerDetails();
+			break;
+			case 3:ProductDetails.productDetails();
+			break;
+			case 4:LandDetails.landDetails();
+				break;
+			case 5:ForestApplication.main(null);
+				break;
+			}
+	}}catch(Exception e) {
+		System.err.println("Invalid input enter number");
+		ForestApplication.main(null);
+			
+		}
+	}
+}
+
+
+
+

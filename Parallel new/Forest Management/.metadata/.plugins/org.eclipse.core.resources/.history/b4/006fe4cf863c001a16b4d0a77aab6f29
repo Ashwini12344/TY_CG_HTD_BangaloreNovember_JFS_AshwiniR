@@ -1,0 +1,56 @@
+package com.capgemini.forestjdbc.util;
+
+public class Validate {
+	public static int countofdigits(int number) {
+		int count=0;
+		while(number!=0) {
+			number/=10;
+			++count;
+		}
+		return count;
+	}
+public static boolean DayValid(String day) {
+		
+		if(day.equalsIgnoreCase("monday")) {
+			return true;
+		}else if(day.equalsIgnoreCase("tuesday")) {
+			return true;
+		}
+		else if(day.equalsIgnoreCase("wednesday")) {
+			return true;
+		}
+		else if(day.equalsIgnoreCase("thursday")) {
+			return true;
+		}
+		else if(day.equalsIgnoreCase("friday")) {
+			return true;
+		}
+		else if(day.equalsIgnoreCase("saturday")) {
+			return true;
+		}else if(day.equalsIgnoreCase("sunday")) {
+			return true;
+		}else if(day.equalsIgnoreCase("mon")) {
+			return true;
+		}
+		else if(day.equalsIgnoreCase("tue")) {
+			return true;
+		}else if(day.equalsIgnoreCase("wed")) {
+			return true;
+		}
+		else if(day.equalsIgnoreCase("thu")) {
+			return true;
+		}
+		else if(day.equalsIgnoreCase("fri")) {
+			return true;
+		}
+		else if(day.equalsIgnoreCase("sat")) {
+			return true;
+		}else if(day.equalsIgnoreCase("sun")) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+}

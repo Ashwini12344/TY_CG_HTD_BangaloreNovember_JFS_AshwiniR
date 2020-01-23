@@ -1,0 +1,14 @@
+package com.capgemini.forestcollection.dao;
+
+import java.util.List;
+
+import com.capgemini.forestcollection.bean.*;
+
+public interface SchedulerDAO {
+	
+	public boolean addSchedule(SchedulerBean bean);
+	public boolean modifySchedule(SchedulerBean sbean);
+	public boolean deleteSchedule(int scheduleId);
+	
+
+}

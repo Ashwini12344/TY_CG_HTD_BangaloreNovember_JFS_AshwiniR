@@ -1,0 +1,17 @@
+package com.capgemini.forestmgtboot.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "land")
+public class LandBean {
+	private int landId;
+	private String landLoc;
+	private int landVal;
+	private String acqDate;
+
+}

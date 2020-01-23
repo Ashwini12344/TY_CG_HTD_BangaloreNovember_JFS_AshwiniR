@@ -1,0 +1,28 @@
+package com.capgemini.forestmgtboot.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="user")
+public class UserBean {
+	@Id
+	@Column(unique=true,nullable=false)
+	private String username;
+    @Column(nullable=false)
+	private String password;
+//	@Column(nullable=false)
+//	private int phone;
+//	@Column(nullable=false)
+//	private String password;
+//	@Column(nullable=false)
+//	private String gender;
+//	@Column(nullable=false)
+//	private String role;
+}

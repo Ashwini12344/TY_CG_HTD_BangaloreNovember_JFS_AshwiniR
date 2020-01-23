@@ -1,0 +1,5 @@
+package com.capgemini.forestmgtboot.dto;
+
+public class LandBean {
+
+}

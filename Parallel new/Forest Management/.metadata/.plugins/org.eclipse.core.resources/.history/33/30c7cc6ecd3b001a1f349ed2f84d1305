@@ -1,0 +1,15 @@
+package com.capgemini.forestmgtboot.dao;
+
+import java.util.List;
+
+import com.capgemini.forestmgtboot.dao.*;
+import com.capgemini.forestmgtboot.dto.LandBean;
+
+public interface LandDao {
+	public List<LandBean> showAllLands();
+
+	public boolean addLand(LandBean land);
+
+	public boolean removeLand(int landId);
+
+}

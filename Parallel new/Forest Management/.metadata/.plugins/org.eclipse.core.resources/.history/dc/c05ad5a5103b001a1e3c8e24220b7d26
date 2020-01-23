@@ -1,0 +1,8 @@
+package com.capgemini.forestmgtboot.service;
+
+import com.capgemini.forestmgtboot.dto.*;
+
+public interface UserService {
+	public boolean register(UserBean user);
+	public UserBean login(String email,String password);
+}

@@ -1,0 +1,70 @@
+package com.capgemini.fmshibernate.bean;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="contract")
+public class Contract {
+	@Id
+	@Column
+	private int contractno;
+	@Column
+	private int customerid;
+	@Column
+	private int haulid;
+	@Column
+	private int productid;
+	@Column
+	private int quantity;
+	@Column
+	private String deliverydate;
+	
+	public int getContract_no() {
+		return contractno;
+	}
+	public void setContract_no(int contractno) {
+		this.contractno = contractno;
+	}
+	public int getCustomerid() {
+		return customerid;
+	}
+	public void setCustomerid(int customerid) {
+		this.customerid = customerid;
+	}
+	public int getHaulid() {
+		return haulid;
+	}
+	public void setHaulid(int haulid) {
+		this.haulid = haulid;
+	}
+	public int getProductid() {
+		return productid;
+	}
+	public void setProductid(int productid) {
+		this.productid = productid;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public String getDeliverydate() {
+		return deliverydate;
+	}
+	public void setDeliverydate(String deliverydate) {
+		this.deliverydate = deliverydate;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Contract [contractno=" + contractno + ", customerid=" + customerid + ", haulid=" + haulid
+				+ ", productid=" + productid + ", quantity=" + quantity + ", deliverydate=" + deliverydate
+				+ ",  ]";
+	}
+	
+}

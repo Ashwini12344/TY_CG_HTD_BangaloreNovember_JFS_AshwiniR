@@ -1,0 +1,43 @@
+package com.capgemini.forestcollection.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.capgemini.forestcollection.bean.CustomerBean;
+import com.capgemini.forestcollection.bean.SchedulerBean;
+
+public class SchedulerDAOImpl implements SchedulerDAO {
+	Scanner sc = new Scanner(System.in);
+	private List<SchedulerBean> bean1 = new ArrayList<SchedulerBean>();
+
+	@Override
+	public boolean addSchedule(SchedulerBean bean) {
+		for (SchedulerBean schedulerBean : bean1) {
+			if (schedulerBean.getScheduleId() == bean.getScheduleId()) {
+				return false;
+			} else {
+				bean1.add(bean);
+				return true;
+
+			}
+
+		}
+		return false;
+	}
+
+@Override
+	public boolean modifySchedule(SchedulerBean sbean) {
+		//for (SchedulerBean schedulerBean : bean1) {
+//			if (customerBean.getEmail() == email) {
+//				customerBean.setEmail(sc.next());
+//
+//			} else {
+//				return false;
+//			}
+//		}
+		return false;
+	}
+
+	
+}

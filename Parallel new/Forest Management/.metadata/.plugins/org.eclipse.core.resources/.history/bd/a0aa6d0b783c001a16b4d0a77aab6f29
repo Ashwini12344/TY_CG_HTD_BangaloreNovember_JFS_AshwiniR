@@ -1,0 +1,23 @@
+package com.capgemini.forestjdbc.bean;
+
+import java.io.Serializable;
+
+import lombok.Data;
+
+@Data
+public class SchedulerBean implements Serializable {
+	private int scheduleId;
+	private int contractId;
+	private int ProductId;
+	private int quantity;
+	private String deliveryDate;
+	
+	@Override
+	public String toString() {
+		return "SchedulerBean [scheduleId=" + scheduleId + ", contractId=" + contractId + ", ProductId=" + ProductId
+				+ ", quantity=" + quantity + ", deliveryDate=" + deliveryDate + "]";
+	}
+	
+
+
+}

@@ -1,0 +1,5 @@
+package com.capgemini.forestcollection.manager;
+
+public class SchedulerDAOManager {
+
+}

@@ -1,0 +1,19 @@
+package com.capgemini.fmshibernate.service;
+
+import java.util.List;
+
+import com.capgemini.fmshibernate.bean.Scheduler;
+
+public interface SchedulerService {
+
+	public boolean addSchedule(Scheduler bean);
+
+	public boolean modifySchedule(Scheduler sbean);
+
+	public boolean deleteSchedule(int scheduleId);
+
+	public Scheduler getSchedule(int scheduleId);
+
+	public List<Scheduler> getAllSchedules();
+
+}

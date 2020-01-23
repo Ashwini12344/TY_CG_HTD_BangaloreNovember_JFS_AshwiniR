@@ -1,0 +1,17 @@
+package com.capgemini.fmshibernate;
+
+import org.junit.jupiter.api.Test;
+
+import com.capgemini.fmshibernate.dao.ProductDAO;
+import com.capgemini.fmshibernate.dao.ProductDAOImpl;
+
+public class TestProduct {
+	ProductDAO dao=new ProductDAOImpl();
+	
+	@Test
+	public void testShowProduct() {
+		
+		
+	}
+
+}

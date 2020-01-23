@@ -1,0 +1,10 @@
+1579530999247	Copy package
+1579576503161	Rename package 'com.capgemini.fmshibernte.validate'
+1579629215213	Rename type 'ContractDetails'
+1579629255138	Rename type 'CustomerDetails'
+1579629274348	Rename type 'LandDetails'
+1579629307397	Rename type 'ProductDetails'
+1579629382060	Rename type 'LandDao'
+1579629403672	Rename type 'LandDaoImpl'
+1579638724118	Delete element
+1579660123686	Rename type 'SchedulerDao'

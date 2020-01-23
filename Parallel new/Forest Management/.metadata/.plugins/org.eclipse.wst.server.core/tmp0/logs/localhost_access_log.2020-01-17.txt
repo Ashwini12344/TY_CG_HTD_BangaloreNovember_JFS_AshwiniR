@@ -1,0 +1,10 @@
+127.0.0.1 - - [17/Jan/2020:06:43:59 -0500] "GET / HTTP/1.1" 404 709
+127.0.0.1 - - [17/Jan/2020:06:48:59 -0500] "GET / HTTP/1.1" 404 709
+127.0.0.1 - - [17/Jan/2020:06:54:11 -0500] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [17/Jan/2020:06:55:46 -0500] "POST /springrest/add-contract HTTP/1.1" 200 101
+0:0:0:0:0:0:0:1 - - [17/Jan/2020:06:55:55 -0500] "POST /springrest/add-contract HTTP/1.1" 200 101
+0:0:0:0:0:0:0:1 - - [17/Jan/2020:06:56:15 -0500] "POST /springrest/add-contract HTTP/1.1" 200 101
+127.0.0.1 - - [17/Jan/2020:06:58:51 -0500] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [17/Jan/2020:06:59:49 -0500] "POST /springrest/add-contract HTTP/1.1" 200 92
+0:0:0:0:0:0:0:1 - - [17/Jan/2020:07:00:42 -0500] "GET /springrest/get-contract?contractno=674 HTTP/1.1" 200 104
+0:0:0:0:0:0:0:1 - - [17/Jan/2020:10:46:48 -0500] "POST /springrest/add-contract HTTP/1.1" 200 101

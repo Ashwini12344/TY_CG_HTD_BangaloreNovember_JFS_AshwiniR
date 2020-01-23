@@ -1,0 +1,29 @@
+package com.capgemini.springrest.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+@Data
+@Entity
+@Table(name="contract")
+public class ContractBean {
+	@Id
+	@GeneratedValue
+	@Column 
+	private int contractNo;
+	private int customerid;
+	@Column
+	private int haulid;
+	@Column
+	private int productid;
+	@Column
+	private int quantity;
+	@Column
+	private String deliverydate;
+	@Column
+	private String deliveryday;
+}

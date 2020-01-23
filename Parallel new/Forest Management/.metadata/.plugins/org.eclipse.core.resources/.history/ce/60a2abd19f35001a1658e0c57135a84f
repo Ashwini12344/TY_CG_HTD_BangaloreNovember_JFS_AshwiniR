@@ -1,0 +1,5 @@
+package com.capgemini.forestmgtrest.config;
+
+public class ORMConfig {
+
+}

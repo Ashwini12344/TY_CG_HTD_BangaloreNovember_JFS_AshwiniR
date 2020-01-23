@@ -1,0 +1,21 @@
+package com.capgemini.forestmgtboot.controller;
+
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.forestmgtboot.dto.ProductResponse;
+import com.capgemini.forestmgtboot.exception.ProductException;
+
+@RestController
+public class ProductControllerAdvice {
+	@ExceptionHandler(ProductException.class)//handle exception in spring
+	
+	public ProductResponse handleEmployeeException(ProductException e) {
+		ProductResponse response=new ProductResponse();
+		response.setStatusCode(501);
+		response.setMessage("Exception");
+		response.setDescription(e.getMessage());
+		return response;
+	}
+
+}

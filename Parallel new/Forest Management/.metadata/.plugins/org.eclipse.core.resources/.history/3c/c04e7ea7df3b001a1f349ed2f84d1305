@@ -1,0 +1,19 @@
+package com.capgemini.forestmgtboot.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="scheduler")
+public class SchedulerBean {
+	private int scheduleId;
+	private int contractNo;
+	private int ProdId;
+	private int quantity;
+	private String deliveryDate;
+	
+
+}

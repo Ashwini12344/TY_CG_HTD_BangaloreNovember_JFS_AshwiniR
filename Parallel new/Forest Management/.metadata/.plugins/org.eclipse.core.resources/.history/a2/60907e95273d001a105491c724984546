@@ -1,0 +1,5 @@
+package com.capgemini.forestmgtboot.controller;
+
+public class ProductControllerAdvice {
+
+}

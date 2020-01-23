@@ -1,0 +1,5 @@
+package com.capgemini.forestcollection.exception;
+
+public class CustomerException {
+
+}

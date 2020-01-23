@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CustomerBean.java&apos; to &apos;fmshibernate/src/main/java/com.capgemini.fmshibernate.entity&apos;&#x0D;&#x0A;- Original project: &apos;forestjdbc&apos;&#x0D;&#x0A;- Destination element: &apos;fmshibernate/src/main/java/com.capgemini.fmshibernate.entity&apos;&#x0D;&#x0A;- Original element: &apos;com.capgemini.forestjdbc.bean.CustomerBean.java&apos;" description="Copy compilation unit" destination="=fmshibernate/src\/main\/java&lt;com.capgemini.fmshibernate.entity" element1="/src&lt;com.capgemini.forestjdbc.bean{CustomerBean.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1577574576449" units="1" version="1.0"/>
+</session>
